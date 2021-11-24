@@ -3,7 +3,7 @@ public class TestResults {
     private int[] results;
     private String personality;
 
-    TestResults(String name, String answers) {
+    public TestResults(String name, String answers) {
 
     }
 }
