@@ -24,14 +24,14 @@ public class TestResults {
 
             if (answers.charAt(i) == '-') continue;
             if (answers.charAt(i) == 'A') processedResults[fieldIndex]++;
-            else processedResults[fieldIndex + 1]++; //answers[i] == 'B';
+            else processedResults[fieldIndex + 1]++; //answers.charAt(i) == 'B';
         }
 
         ArrayList<Integer> results = new ArrayList<>();
 
         for (int j = 0; j < 4; ++j)
-            results.add((processedResults[2 * j + 1] * 100 /
-                    (processedResults[2 * j] + processedResults[2 * j + 1])));
+            results.add(Math.round(100.0f*(float)(processedResults[2 * j + 1]) /
+                    ((float)(processedResults[2 * j] + (float)(processedResults[2 * j + 1])))));
 
         this.results = results;
 
