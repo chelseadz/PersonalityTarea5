@@ -1,3 +1,10 @@
+/*
+Integrantes:
+Durazo Duarte Chelsea
+Felix Morales Jose Heriberto
+Torres Gonzalez Diego
+ */
+
 public class Main {
 
 
