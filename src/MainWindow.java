@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -25,14 +23,11 @@ public class MainWindow extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(pMain);
 
-        bOpenFile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                File file = openFile();
-                if (file != null) {
-                    taResults.setText(null);
-                    getResultsFromText(file).forEach(r -> taResults.append(r.toString() + "\n"));
-                }
+        bOpenFile.addActionListener(e -> {
+            File file = openFile();
+            if (file != null) {
+                taResults.setText(null);
+                getResultsFromText(file).forEach(r -> taResults.append(r.toString() + "\n"));
             }
         });
     }
