@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         MainWindow main = new MainWindow();
         getResultsFromText("bigdata.txt");
