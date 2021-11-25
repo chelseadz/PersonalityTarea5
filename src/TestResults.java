@@ -45,7 +45,6 @@ public class TestResults {
             else if( results.get(s) > 50) characteristic = resultB.charAt(s);
             else characteristic = 'X';
 
-
             personality += characteristic;
         }
     }
